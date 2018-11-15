@@ -54,6 +54,10 @@
     display: block
     position: relative
 
+    &:before,
+    &:after
+      transition: transform .5s ease-in-out
+
     &:before
       content: ''
       display: block
@@ -74,3 +78,11 @@
       height: 2px
       background-color: #c31923
       transform: rotate(90deg)
+
+
+.accordion__item--active
+  a
+    &:after
+      transform: rotate(180deg)
+    &:before
+      transform: rotate(-180deg)
