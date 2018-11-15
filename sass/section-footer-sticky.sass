@@ -1,0 +1,68 @@
+@import "breakpoints"
+
+.footer-sticky
+  position: sticky
+  display: flex
+  justify-content: center
+  height: 160px
+  width: 100vw
+  bottom: 0
+  background-color: rgba(0, 0, 0, 0.5)
+
+  +narrow
+    height: 140px
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    width: 75%
+    margin-top: 40px
+    +narrow
+      width: 100%
+      margin-top: 20px
+
+    &-form
+      display: flex
+      justify-content: space-between
+      width: 65%
+
+      +wide
+        width: 75%
+
+      +narrow
+        width: 100%
+        display: inline-block
+
+  input
+    &[type="button"]
+      padding: 42px 0
+      +narrow
+        padding: 20px 0
+
+  span
+    width: 24px
+    height: 24px
+    cursor: pointer
+    margin-top: 35px
+    +narrow
+      display: none
+
+    &:before
+      content: ''
+      position: relative
+      top: 10px
+      display: block
+      height: 2px
+      width: 24px
+      transform: rotate(45deg)
+      background-color: white
+
+    &:after
+      content: ''
+      position: relative
+      top: 9px
+      display: block
+      height: 2px
+      width: 24px
+      transform: rotate(-45deg)
+      background-color: white

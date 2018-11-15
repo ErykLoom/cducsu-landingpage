@@ -1,0 +1,50 @@
+@import "breakpoints"
+.landingpage-slider
+  margin-top: 11%
+  +wide
+    margin-top: 9%
+
+  &__controls
+    display: flex
+    position: absolute
+    right: 0
+
+  &__current,
+  &__next
+    display: flex
+    justify-content: center
+    flex-direction: column
+    vertical-align: center
+    text-align: center
+
+  &__current
+    width: 130px
+    height: 120px
+    font-size: 16px
+    font-weight: bold
+    color: white
+    letter-spacing: 3px
+    background-color: rgba(0,0,0, 0.5)
+
+  &__next
+    height: 120px
+    width: 170px
+    background-color: #f0f0f0
+
+    img
+      cursor: pointer
+
+  &__slider
+    display: flex
+    justify-content: flex-end
+
+
+    img
+      width: 1260px
+      height: 837px
+      +wide
+        width: 800px
+        height: unset
+      +narrow
+        width: 300px
+        height: unset

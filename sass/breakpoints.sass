@@ -1,0 +1,11 @@
+@mixin narrow
+  @media screen and (max-width: 650px)
+    @content
+
+@mixin medium
+  @media (min-width: 651px) and (max-width: 999px)
+    @content
+
+@mixin wide
+  @media (max-width: 1280px)
+    @content

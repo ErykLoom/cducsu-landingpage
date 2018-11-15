@@ -1,0 +1,53 @@
+@import "fonts"
+@import "breakpoints"
+
+.accordion
+  margin: 25% auto 160px
+  width: 46%
+  +wide
+    margin: 42% auto 160px
+    width: 55%
+
+  &__text
+    margin-bottom: 65px
+
+  h3
+    margin: 45px 45px 25px
+    font-family: $serif
+
+  ul
+    margin: 0
+    padding: 0
+
+  li
+    display: block
+
+  p
+    width: 84%
+    margin: 0 45px
+    font-size: 22px
+
+  a
+    display: block
+    position: relative
+
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 15px
+      left: 0
+      width: 24px
+      height: 2px
+      background-color: #c31923
+
+    &:after
+      top: 15px
+      left: 0
+      position: absolute
+      content: ''
+      display: block
+      width: 24px
+      height: 2px
+      background-color: #c31923
+      transform: rotate(90deg)

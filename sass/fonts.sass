@@ -1,0 +1,31 @@
+$sans-weights: 400 500 600 700
+
+@each $weight in $sans-weights
+  @font-face
+    font-family: 'Milo'
+    src: url(../fonts/Milo-#{$weight}.eot)
+    src: url(../fonts/Milo-#{$weight}.woff) format('woff')
+    src: url(../fonts/Milo-#{$weight}.ttf) format('truetype')
+
+
+    font-weight: $weight
+
+@each $weight in $sans-weights
+  .weight-#{$weight}
+    font-weight: $weight
+
+$sans: 'Milo', sans-serif
+.sans
+  font-family: $sans
+
+@font-face
+  font-family: 'Milo-Serif'
+  src: url(../fonts/Milo-Serif.eot)
+  src: url(../fonts/Milo-Serif.woff) format('woff')
+  src: url(../fonts/Milo-Serif.ttf) format('truetype')
+  font-weight: 500
+
+$serif: 'Milo-Serif', serif
+
+.serif
+  font-family: $serif

@@ -1,0 +1,26 @@
+@import "breakpoints"
+
+.scroller
+  display: inline-block
+  margin-right: 30px
+
+  &__button
+    width: 40px
+    height: 24px
+    border-radius: 25.5px
+    border: solid 2px #b9b9b9
+
+    +narrow
+      height: 17px
+      width: 28px
+
+    &:after
+      content: ''
+      display: inline-block
+      position: relative
+      width: 5px
+      height: 5px
+      background-color: #b9b9b9
+      border-radius: 50%
+      left: 7px
+      top: 6px

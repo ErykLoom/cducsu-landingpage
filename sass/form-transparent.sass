@@ -1,0 +1,35 @@
+@import "breakpoints"
+@import "fonts"
+
+.form-transparent
+  color: white
+
+  +narrow
+    display: flex
+    justify-content: center
+    margin-bottom: 15px
+
+  &__input
+    padding: 24px
+    border: 2px solid white
+    font-size: 27px
+    background-color: transparent
+    color: white
+    width: 630px
+    outline: none
+    &::placeholder
+      font-size: 24px
+      color: white
+
+    +wide
+      width: 450px
+
+    +narrow
+      font-family: $sans
+      font-size: 14px
+      width: 327px
+      height: 40px
+      font-weight: bold
+      &::placeholder
+        font-size: 14px
+        color: white

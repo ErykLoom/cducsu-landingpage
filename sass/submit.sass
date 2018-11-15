@@ -1,0 +1,35 @@
+@import "breakpoints"
+@import "fonts"
+
+.submit
+  width: 257px
+  height: 80px
+  background-color: #c31923
+  display: flex
+  flex-direction: column
+
+  &-buttons
+    display: flex
+    width: 100%
+    justify-content: space-evenly
+
+  +narrow
+    width: 155px
+    height: 40px
+
+  &__button
+    color: white
+    font-size: 24px
+    font-weight: bold
+    text-align: center
+    padding: 40px 0
+    line-height: 0
+    border: none
+    cursor: pointer
+    outline: none
+    &-red
+      background-color: #c31923
+    &-grey
+      background-color: #b9b9b9
+    +narrow
+      font-size: 14px

@@ -1,0 +1,23 @@
+@import "breakpoints"
+
+.breadcrumb-rotated
+  position: relative
+  top: 22%
+  width: 250px
+  display: flex
+  flex-direction: row-reverse
+  font-size: 14px
+  font-weight: bold
+  transform: rotate(-90deg)
+
+  &__normal
+    opacity: 0.35
+
+  &__border
+    margin: 0 10px
+
+  &__white
+    color: white
+
+  +narrow
+    display: none
