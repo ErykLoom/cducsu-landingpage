@@ -30,15 +30,28 @@
 
 (function($) {
 
-  var close = $('#footer-close');
+  var closeX = $('#footer-close-x');
+  var closeBtn = $('#footer-close-btn');
 
-  close
+  closeX
     .click(function() {
       $('.footer-sticky').css({
         'display': 'none',
       })
   });
 
+  closeBtn
+    .click(function() {
+      $('.footer-sticky').css({
+        'display': 'none',
+      })
+    });
+
 })(jQuery);
 
 
+(function($) {
+
+  $('.landingpage-slider__slider').slick();
+
+})(jQuery);

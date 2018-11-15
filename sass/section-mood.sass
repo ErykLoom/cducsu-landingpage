@@ -7,13 +7,25 @@
   background-size: 100%
   height: 100vh
   width: 100vw
+
+  +medium
+    background-size: cover
+    background-position-x: -200px
+
   +narrow
-    background-image: url(../img/mood.jpeg)
-    background-repeat: no-repeat
-    width: 100vw
-    height: 650px
     background-size: cover
     background-position-x: -250px
+
+  &:before
+    content: ''
+    display: inline-block
+    position: absolute
+    height: 100%
+    width: 100%
+    background-image: radial-gradient(circle at 51% 50%, rgba(0, 0, 0, 0), #000000)
+
+  &__content
+    position: relative
 
   &-header
     font-family: $sans
@@ -26,6 +38,12 @@
 
       h1
         font-size: 60px
+
+    +medium
+      width: 40%
+      margin: 20% 0 0 10%
+      h1
+        font-size: 55px
 
     +narrow
       width: 62%
@@ -46,6 +64,15 @@
     +wide
       top: 19%
 
+    +medium
+      top: 530px
+      width: 100px
+      height: 300px
+
+    +medium-wide
+      top: 750px
+
+
     +narrow
       height: 90px
       width: 60px
@@ -57,3 +84,6 @@
       top: 33%
       left: 4%
       display: flex
+
+      +medium
+        left: -33%

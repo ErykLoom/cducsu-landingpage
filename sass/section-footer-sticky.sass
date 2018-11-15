@@ -9,6 +9,9 @@
   bottom: 0
   background-color: rgba(0, 0, 0, 0.5)
 
+  +medium
+    padding-bottom: 35px
+
   +narrow
     height: 140px
 
@@ -17,6 +20,13 @@
     justify-content: space-between
     width: 75%
     margin-top: 40px
+
+    +wide
+      width: 78%
+
+    +medium
+      margin-top: 20px
+
     +narrow
       width: 100%
       margin-top: 20px
@@ -24,10 +34,14 @@
     &-form
       display: flex
       justify-content: space-between
-      width: 65%
+      width: 85%
 
       +wide
         width: 75%
+
+      +medium
+        flex-direction: column
+        width: 100%
 
       +narrow
         width: 100%
@@ -37,13 +51,18 @@
     &[type="button"]
       padding: 42px 0
       +narrow
-        padding: 20px 0
+        padding: 20px
+        width: 150px
 
   span
     width: 24px
     height: 24px
     cursor: pointer
     margin-top: 35px
+
+    +medium
+      display: none
+
     +narrow
       display: none
 

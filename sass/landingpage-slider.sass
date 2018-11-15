@@ -1,8 +1,14 @@
 @import "breakpoints"
+@import "fonts"
+
 .landingpage-slider
   margin-top: 11%
+
   +wide
     margin-top: 9%
+
+  +medium
+    margin-top: 0
 
   &__controls
     display: flex
@@ -25,14 +31,28 @@
     color: white
     letter-spacing: 3px
     background-color: rgba(0,0,0, 0.5)
+    +narrow
+      font-weight: normal
+      width: 63px
+      height: 40px
+      font-size: 12px
+      letter-spacing: 2
+
 
   &__next
     height: 120px
     width: 170px
     background-color: #f0f0f0
+    +narrow
+      width: 70px
+      height: 40px
+      font-size: 12px
+      letter-spacing: 2
 
     img
       cursor: pointer
+      +narrow
+        height: 9px
 
   &__slider
     display: flex
@@ -42,9 +62,15 @@
     img
       width: 1260px
       height: 837px
+
       +wide
         width: 800px
         height: unset
+
+      +medium
+        width: 100vw
+        height: unset
+
       +narrow
-        width: 300px
+        width: 330px
         height: unset

@@ -1,8 +1,18 @@
+@import "breakpoints"
+@import "fonts"
+
 .footer
   display: flex
   justify-content: space-between
   height: 100px
   width: 95vw
+
+  +medium
+    width: 80vw
+    margin: 0 auto
+
+  +narrow
+    height: 65px
 
   &__links
     width: 260px
@@ -11,9 +21,18 @@
     margin-top: 45px
     display: flex
     justify-content: space-between
+    +narrow
+      width: 170px
+      margin-top: 25px
+      a
+        font-size: 14px
 
   img
     width: 160px
+    +narrow
+      width: 120px
 
   span
     font-size: 12px
+    +narrow
+      font-size: 9px
