@@ -13,17 +13,41 @@ input
   outline: none
 
 .form-wrapper
-  &--transparent
+  &--background
+    +narrow
+      margin: 0 auto
 
 
 .form
   display: flex
   justify-content: center
 
+  +narrow
+    flex-direction: column
+
   .cr_ipe_item
     &:first-child
       width: 55%
       margin-right: 30px
+      +narrow
+        width: 100%
+        margin: 0
+
+  &-background
+    .cr_ipe_item
+      &:first-child
+        width: 33%
+        margin-right: 30px
+        +medium
+          width: 55%
+        +narrow
+          width: 100%
+          margin: 0
+
+  &-buttons
+    display: flex
+    +narrow
+      display: inline-block
 
   &__input
     @extend %input-basic
@@ -32,21 +56,36 @@ input
 
     +narrow
       font-family: $sans
-      font-size: 14px
-      width: 327px
-      height: 40px
+      font-size: 18px
+      min-width: 288px
+      height: 60px
       font-weight: bold
-
-      &::placeholder
-        font-size: 14px
-        color: white
+      padding: 0 20px
 
     &::placeholder
       font-size: 24px
       color: white
+      +narrow
+        font-size: 18px
+        color: white
 
     .form-wrapper--transparent &
       background-color: transparent
+
+    &-background
+      color: #b9b9b9
+      border: none
+
+      +narrow
+        margin-bottom: 15px
+
+      &::placeholder
+        color: #b9b9b9
+
+    &.sticky
+      +narrow
+        height: 40px
+
 
   &__submit
     @extend %input-basic
@@ -55,7 +94,32 @@ input
     transition: background-color .5s ease-in-out
     min-width: 257px
 
+    +medium
+      min-width: 240px
+
+    +narrow
+      line-height: 60px
+      font-size: 18px
+      margin-top: 10px
+
     &:hover
       cursor: pointer
       background-color: #8c151c
+
+    &-sticky
+      +narrow
+        min-width: 0
+        max-width: 100%
+        width: 100%
+        line-height: 40px
+
+    &.grey
+      +wide
+        display: none
+
+      +medium
+        display: none
+
+      +narrow
+        background-color: #b9b9b9
 
