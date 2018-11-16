@@ -49,6 +49,7 @@
 
 })(jQuery);
 
+
 (function($) {
 
   var slider = $('.landingpage-slider');
@@ -69,6 +70,5 @@
       autoPlay: true,
       dots: true,
     });
-
 
 })(jQuery);

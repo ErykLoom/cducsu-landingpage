@@ -1,0 +1,61 @@
+@import "breakpoints"
+@import "fonts"
+
+input
+  width: 100%
+
+%input-basic
+  padding: 0 40px
+  font-size: 24px
+  border: none
+
+  color: #fff
+  outline: none
+
+.form-wrapper
+  &--transparent
+
+
+.form
+  display: flex
+  justify-content: center
+
+  .cr_ipe_item
+    &:first-child
+      width: 55%
+      margin-right: 30px
+
+  &__input
+    @extend %input-basic
+    border: 2px solid #fff
+    line-height: 76px
+
+    +narrow
+      font-family: $sans
+      font-size: 14px
+      width: 327px
+      height: 40px
+      font-weight: bold
+
+      &::placeholder
+        font-size: 14px
+        color: white
+
+    &::placeholder
+      font-size: 24px
+      color: white
+
+    .form-wrapper--transparent &
+      background-color: transparent
+
+  &__submit
+    @extend %input-basic
+    line-height: 80px
+    background-color: #c31923
+    transition: background-color .5s ease-in-out
+    min-width: 257px
+
+    &:hover
+      cursor: pointer
+      background-color: #8c151c
+
