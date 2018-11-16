@@ -1,19 +1,22 @@
 (function($) {
 
-  var slider = $('.landingpage-slider__slider');
-  var currentSlide = 1;
-
-  slider.on('initial', function () {
-    $('#slide-current').text(currentSlide);
-  });
+  var slider = $('.landingpage-slider');
 
   slider
-    .slick({
+    .on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+      var i = (currentSlide ? currentSlide : 0) + 1;
+      $('.landingpage-slider__current').text(i + ' // ' + slick.slideCount);
+      console.log(slick.slideCount);
+    });
 
-    prevArrow: '',
-    nextArrow: '#pfeil-next',
-    draggable: false,
-    autoPlay: true,
-  });
+  slider
+    .find('.landingpage-slider__slider')
+    .slick({
+      prevArrow: '',
+      nextArrow: '#pfeil-next',
+      draggable: false,
+      autoPlay: true,
+      dots: true,
+    });
 
 })(jQuery);

@@ -49,7 +49,6 @@
 
 })(jQuery);
 
-
 (function($) {
 
   var slider = $('.landingpage-slider');
