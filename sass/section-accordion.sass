@@ -2,19 +2,20 @@
 @import "breakpoints"
 
 .accordion
-  margin: 25% auto 160px
   width: 46%
-  +wide
 
-    margin: 42% auto 160px
+
+  +wide
     width: 55%
+    margin: 0 auto 140px
 
   +medium
     width: 90%
+    margin: 0 auto 100px
 
   +narrow
-    margin: 550px auto 75px
     width: 75%
+    margin: 0 auto 70px
 
   &__text
     margin-bottom: 65px
@@ -35,6 +36,8 @@
 
   li
     display: block
+    &:hover
+      cursor: pointer
 
   p
     width: 84%

@@ -52,30 +52,12 @@
 
 (function($) {
 
-  var slider = $('.landingpage-slider__slider');
-  var currentSlide = 1;
+  $('.landingpage-slider__slider').slick({
 
-  slider
-    .on('init', function() {
-    $('#slide-current').text(currentSlide);
-  });
-
-  slider
-    .on('afterChange', function () {
-      currentSlide++;
-      $('#slide-current').text(currentSlide);
-    });
-  
-  slider
-    .slick({
-
-      prevArrow: '',
-      nextArrow: '#pfeil-next',
-      draggable: false,
-      autoPlay: true,
-      dots: true,
-      dotsClass: 'custom_paging',
-
+    prevArrow: '',
+    nextArrow: '#pfeil-next',
+    draggable: false,
+    autoPlay: true,
   });
 
 })(jQuery);

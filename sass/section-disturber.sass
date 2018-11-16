@@ -1,0 +1,31 @@
+@import 'breakpoints'
+
+.disturber
+  position: relative
+  img
+    position: absolute
+    right: 0
+    +narrow
+      max-width: 332px
+      top: -100px
+    +medium
+      max-width: 400px
+      top: -140px
+    +wide
+      max-width: 820px
+      top: -320px
+
+.pre-disturber
+  +narrow
+    padding-bottom: 100px
+  +medium
+    padding-bottom: 140px
+  +wide
+    padding-bottom: 250px
+.after-disturber
+  +narrow
+    padding-top: 130px
+  +medium
+    padding-top: 140px
+  +wide
+    padding-top: 300px
