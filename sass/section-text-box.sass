@@ -44,11 +44,14 @@
     width: 860px
     color: white
 
+    +slider
+      width: 65%
+
     +wide
-      margin: 75px auto 0
+      margin: 100px auto 150px
 
     +medium
-      padding-top: 180px
+      padding: 100px 0
       width: 90%
       margin: 0 auto
       height: 50%
@@ -63,17 +66,18 @@
   &__share
     display: flex
     justify-content: space-evenly
-    margin: 10% auto
+    margin: 0 auto
     width: 65%
     text-align: center
     bottom: 20%
 
     +medium
+      margin: 10% auto
       width: 85%
 
     +narrow
       flex-direction: column
-      width: 77%
+      width: 288px
       position: relative
 
   &__button
@@ -108,6 +112,8 @@
 
   &.is-red
     background-color: #c31923
+    +narrow
+      padding-bottom: 50px
 
   &.is-grey
     background-color: #f0f0f0

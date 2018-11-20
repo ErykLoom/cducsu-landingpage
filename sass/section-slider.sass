@@ -1,12 +1,20 @@
 @import "breakpoints"
+
 .slider
   height: 100vh
   width: 100vw
   position: relative
 
+  +slider
+    height: unset
+
   +medium
-    height: 50vh
+    height: 60vh
 
   +narrow
-    height: 220px
+    height: 35%
     width: unset
+
+  .breadcrumb-rotated
+    +slider
+      display: none

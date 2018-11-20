@@ -4,9 +4,6 @@
   display: inline-block
   margin-right: 30px
 
-  +narrow
-    margin-right: 25px
-
   &__button
     width: 40px
     height: 24px
@@ -19,15 +16,32 @@
 
     &:after
       content: ''
+      opacity: 1
       display: inline-block
       position: relative
       width: 5px
       height: 5px
       background-color: #b9b9b9
       border-radius: 50%
-      left: 10px
+      left: 30px
       top: 10px
+      animation: fade 2s ease both infinite
+
 
       +narrow
         left: 7px
         top: 6px
+
+@keyframes fade
+  0%
+    opacity: 0
+
+  25%
+    opacity: 1
+
+  50%
+    left: 20px
+
+  100%
+    opacity: 0
+    left: 20px

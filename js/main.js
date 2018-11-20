@@ -66,7 +66,6 @@
       nextArrow: '#pfeil-next',
       draggable: false,
       autoPlay: true,
-      dots: true,
     });
 
 })(jQuery);

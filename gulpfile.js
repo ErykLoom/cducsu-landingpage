@@ -8,7 +8,7 @@ const paths = {
     files: ['sass/*.sass', '!./variables/*.sass']
   },
   js: {
-    files: ['js/*.js']
+    files: ['js/*.js', '!js/_*.js']
   }
 };
 
